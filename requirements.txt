@@ -1,0 +1,10 @@
+pillow
+numpy
+scipy
+torch
+tqdm
+kagglehub
+datasets
+scikit-learn
+tensorboardx
+torchvision
