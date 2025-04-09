@@ -8,3 +8,5 @@ datasets
 scikit-learn
 tensorboardx
 torchvision
+timm 
+kagglehub
