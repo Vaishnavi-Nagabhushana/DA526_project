@@ -44,7 +44,7 @@ def main(args):
            f"Number of content images ({len(content_paths)}) and style images ({len(style_paths)}) differ!"
 
     for content_path, style_path in zip(content_paths, style_paths):
-        print(f"\n💡 Processing pair:\n Content: {content_path.name}\n Style: {style_path.name}")
+        print(f"\n Processing pair:\n Content: {content_path.name}\n Style: {style_path.name}")
 
         content_image = content_tf(Image.open(content_path).convert("RGB")).unsqueeze(0).to(device)
         style_image = style_tf(Image.open(style_path).convert("RGB")).unsqueeze(0).to(device)
@@ -57,9 +57,9 @@ def main(args):
         output_filename = os.path.join(args.output, f"{content_path.stem}_stylized_{style_path.stem}.jpg")
         save_image(output.cpu(), output_filename, normalize=True)
         
-        print(f"✅ Stylized image saved clearly at: {output_filename}")
+        print(f" Stylized image saved clearly at: {output_filename}")
 
-    print("\n✅🎉 All testing completed successfully clearly!")
+    print("\n All testing completed successfully clearly!")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Test the StyTr² network clearly & explicitly.")
